@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Solve10</title>
+</head>
+<body>
+    
+    <h5><strong>1. Siapakah Presiden ketiga Republik Indonesia?</strong></h5>
+    <input type="radio" name="presiden"> Prof.B.J.Habibie
+    <input type="radio" name="presiden"> Abdurrahman Wahid
+    <input type="radio" name="presiden"> Ir.Soekarno  
+    <input type="radio" name="presiden"> Joko Widodo 
+
+    <h5><strong>2. Berikut adalah nama-nama bahasa pemrograman, kecuali...</strong></h5>
+    <input type="radio" name="program"> Phyton
+    <input type="radio" name="program"> Micro:bit
+    <input type="radio" name="program"> Javascript 
+    <input type="radio" name="program"> HTML
+
+    <h5><strong>3. Apa Judul lagu yang diduga diplagiat oleh lagu 'Sayang' Via Vallen?</strong></h5>
+    <input type="radio" name="lagu"> Qing Fei De Yi
+    <input type="radio" name="lagu"> Ting Hai
+    <input type="radio" name="lagu"> Mirai E Kiroro
+    <input type="radio" name="lagu"> Hau Siang Hau Siang
+
+    <h5><strong>4. Siapakah sosok di balik topeng Batman</strong></h5>
+    <input type="radio" name="batman"> Natasha Romanov
+    <input type="radio" name="batman"> Peter Parker
+    <input type="radio" name="batman"> Tony Stark
+    <input type="radio" name="batman"> Bruce Wayne
+
+    <br><br>
+    <button onclick=cariNilai()>SUBMIT</button>
+
+    <h2 style="font-size: 24px;"></h2>
+
+
+</body>
+</html>
+
+<script>
+    function cariNilai(){
+        var nilai=0
+        if(document.getElementsByName('presiden')[0].checked==true){
+            nilai+=25
+        }
+        if(document.getElementsByName('program')[3].checked==true){
+            nilai+=25
+        }
+        if(document.getElementsByName('lagu')[1].checked==true){
+            nilai+=25
+        }
+        if(document.getElementsByName('batman')[3].checked==true){
+            nilai+=25
+        }
+        
+        console.log(document.getElementsByName('presiden')[0].value)
+        document.getElementsByTagName('h2')[0].innerHTML=`Nilai Anda ${nilai}`
+    }
+</script>
