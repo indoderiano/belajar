@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Solve8</title>
+</head>
+<body>
+    
+    <p>Ketik Kalimat:<br><br> <input type="text" id='input1'></p><br>
+
+    <p>Karakter yang Dicari: <br><br><input type="text" id='input2'></p><br>
+
+    <button onclick=cariKarakter()>Cari!</button>
+
+    <h5 id='target'></h5>
+
+</body>
+</html>
+
+<script>
+    function cariKarakter(){
+        var arr=document.getElementById('input1').value
+        var kar=new RegExp(document.getElementById('input2').value,'g')
+        var out=arr.match(kar)
+
+        ""
+        document.getElementById('target').innerHTML="Jumlah '"+document.getElementById('input2').value+"' sebanyak "+out.length+' buah'
+        document.getElementById('input1').value=''
+        document.getElementById('input2').value=''
+    }
+
+</script>
